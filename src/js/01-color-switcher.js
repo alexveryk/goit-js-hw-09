@@ -13,19 +13,15 @@ function selectBtnStart(event) {
     return;
   }
 
-  console.log('Entered Start');
-
   btnStart.setAttribute('disabled', true);
   btnStop.removeAttribute('disabled');
 
   intervalId = setInterval(() => {
-    console.log(getRandomHexColor());
     body.style.backgroundColor = getRandomHexColor();
   }, 1000);
 }
 
 function selectBtnStop(event) {
-  console.log('Entered Stop');
   clearInterval(intervalId);
 
   btnStop.setAttribute('disabled', true);
