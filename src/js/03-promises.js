@@ -18,14 +18,14 @@ function onSubmit(evt) {
     let delay = j;
 
     createPromise(position, delay)
-      .then((position, delay) => {
-        console.log(`✅ Fulfilled promise ${position} in ${delay}ms`);
+      .then(value => {
+        console.log(value);
         Notiflix.Notify.success(
           `✅ Fulfilled promise ${position} in ${delay}ms`
         );
       })
-      .catch((position, delay) => {
-        console.log(`❌ Rejected promise ${position} in ${delay}ms`);
+      .catch(value => {
+        console.log(value);
         Notiflix.Notify.failure(
           `❌ Rejected promise ${position} in ${delay}ms`
         );
